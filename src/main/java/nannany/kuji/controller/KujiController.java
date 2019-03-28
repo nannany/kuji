@@ -15,10 +15,9 @@ import nannany.kuji.vo.Role;
 @RestController
 public class KujiController {
 
-	private List<Role> roles = new ArrayList<>(Arrays.asList(Role.SCRUM_MUSTER, Role.PRODUCT_OWNER));
-
 	@GetMapping("kuji")
 	public List<Assignment> getResult(@RequestParam(name = "name", required = true) String names) {
+		List<Role> roles = new ArrayList<>(Arrays.asList(Role.SCRUM_MUSTER, Role.PRODUCT_OWNER));
 		List<String> nameList = Arrays.asList(names.split("-"));
 
 		if (nameList.size() < 2) {
