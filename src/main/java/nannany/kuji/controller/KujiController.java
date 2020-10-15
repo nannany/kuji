@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,7 @@ import nannany.kuji.entity.Assignment;
 import nannany.kuji.vo.Role;
 
 @RestController
+@CrossOrigin(origins = {"http://localhost:3000"})
 public class KujiController {
 
 	@GetMapping("kuji")
